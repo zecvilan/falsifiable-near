@@ -1,0 +1,451 @@
+[{
+  "date": "2026-08-15",
+  "active_signers": "79812",
+  "transactions": "584733",
+  "distinct_receivers": "83021"
+}, {
+  "date": "2026-08-16",
+  "active_signers": "80163",
+  "transactions": "615151",
+  "distinct_receivers": "85446"
+}, {
+  "date": "2026-08-17",
+  "active_signers": "80576",
+  "transactions": "669250",
+  "distinct_receivers": "84226"
+}, {
+  "date": "2026-08-18",
+  "active_signers": "80055",
+  "transactions": "673834",
+  "distinct_receivers": "89995"
+}, {
+  "date": "2026-08-19",
+  "active_signers": "80931",
+  "transactions": "733400",
+  "distinct_receivers": "94255"
+}, {
+  "date": "2026-08-20",
+  "active_signers": "82216",
+  "transactions": "758797",
+  "distinct_receivers": "104977"
+}, {
+  "date": "2026-08-21",
+  "active_signers": "81667",
+  "transactions": "786077",
+  "distinct_receivers": "67173"
+}, {
+  "date": "2026-08-22",
+  "active_signers": "79636",
+  "transactions": "804701",
+  "distinct_receivers": "64422"
+}, {
+  "date": "2026-08-23",
+  "active_signers": "79394",
+  "transactions": "726225",
+  "distinct_receivers": "63118"
+}, {
+  "date": "2026-08-24",
+  "active_signers": "81373",
+  "transactions": "805717",
+  "distinct_receivers": "66158"
+}, {
+  "date": "2026-08-25",
+  "active_signers": "79464",
+  "transactions": "719568",
+  "distinct_receivers": "66906"
+}, {
+  "date": "2026-08-26",
+  "active_signers": "81506",
+  "transactions": "655345",
+  "distinct_receivers": "63549"
+}, {
+  "date": "2026-08-27",
+  "active_signers": "81525",
+  "transactions": "681264",
+  "distinct_receivers": "63315"
+}, {
+  "date": "2026-08-28",
+  "active_signers": "78375",
+  "transactions": "654889",
+  "distinct_receivers": "60752"
+}, {
+  "date": "2026-08-29",
+  "active_signers": "76934",
+  "transactions": "594141",
+  "distinct_receivers": "59173"
+}, {
+  "date": "2026-08-30",
+  "active_signers": "76955",
+  "transactions": "623892",
+  "distinct_receivers": "60225"
+}, {
+  "date": "2026-08-31",
+  "active_signers": "77790",
+  "transactions": "684883",
+  "distinct_receivers": "61681"
+}, {
+  "date": "2026-09-01",
+  "active_signers": "77130",
+  "transactions": "670529",
+  "distinct_receivers": "63624"
+}, {
+  "date": "2026-09-02",
+  "active_signers": "77127",
+  "transactions": "659622",
+  "distinct_receivers": "63526"
+}, {
+  "date": "2026-09-03",
+  "active_signers": "77607",
+  "transactions": "703698",
+  "distinct_receivers": "83933"
+}, {
+  "date": "2026-09-04",
+  "active_signers": "76042",
+  "transactions": "735463",
+  "distinct_receivers": "62193"
+}, {
+  "date": "2026-09-05",
+  "active_signers": "74288",
+  "transactions": "674162",
+  "distinct_receivers": "60937"
+}, {
+  "date": "2026-09-06",
+  "active_signers": "74652",
+  "transactions": "763172",
+  "distinct_receivers": "63018"
+}, {
+  "date": "2026-09-07",
+  "active_signers": "75711",
+  "transactions": "746044",
+  "distinct_receivers": "63439"
+}, {
+  "date": "2026-09-08",
+  "active_signers": "71768",
+  "transactions": "704254",
+  "distinct_receivers": "63312"
+}, {
+  "date": "2026-09-09",
+  "active_signers": "71964",
+  "transactions": "772841",
+  "distinct_receivers": "62899"
+}, {
+  "date": "2026-09-10",
+  "active_signers": "71159",
+  "transactions": "728736",
+  "distinct_receivers": "61602"
+}, {
+  "date": "2026-09-11",
+  "active_signers": "70014",
+  "transactions": "846582",
+  "distinct_receivers": "62063"
+}, {
+  "date": "2026-09-12",
+  "active_signers": "67170",
+  "transactions": "651970",
+  "distinct_receivers": "61150"
+}, {
+  "date": "2026-09-13",
+  "active_signers": "61501",
+  "transactions": "626447",
+  "distinct_receivers": "61616"
+}, {
+  "date": "2026-09-14",
+  "active_signers": "49972",
+  "transactions": "706600",
+  "distinct_receivers": "58532"
+}, {
+  "date": "2026-09-15",
+  "active_signers": "45247",
+  "transactions": "706597",
+  "distinct_receivers": "57194"
+}, {
+  "date": "2026-09-16",
+  "active_signers": "42517",
+  "transactions": "777089",
+  "distinct_receivers": "54768"
+}, {
+  "date": "2026-09-17",
+  "active_signers": "44749",
+  "transactions": "840314",
+  "distinct_receivers": "57070"
+}, {
+  "date": "2026-09-18",
+  "active_signers": "62965",
+  "transactions": "973388",
+  "distinct_receivers": "62666"
+}, {
+  "date": "2026-09-19",
+  "active_signers": "52391",
+  "transactions": "839380",
+  "distinct_receivers": "59726"
+}, {
+  "date": "2026-09-20",
+  "active_signers": "57466",
+  "transactions": "846013",
+  "distinct_receivers": "57799"
+}, {
+  "date": "2026-09-21",
+  "active_signers": "60298",
+  "transactions": "871723",
+  "distinct_receivers": "59407"
+}, {
+  "date": "2026-09-22",
+  "active_signers": "57797",
+  "transactions": "971959",
+  "distinct_receivers": "82626"
+}, {
+  "date": "2026-09-23",
+  "active_signers": "56105",
+  "transactions": "869892",
+  "distinct_receivers": "58210"
+}, {
+  "date": "2026-09-24",
+  "active_signers": "54027",
+  "transactions": "741291",
+  "distinct_receivers": "55059"
+}, {
+  "date": "2026-09-25",
+  "active_signers": "57300",
+  "transactions": "715469",
+  "distinct_receivers": "55832"
+}, {
+  "date": "2026-09-26",
+  "active_signers": "54118",
+  "transactions": "603143",
+  "distinct_receivers": "53925"
+}, {
+  "date": "2026-09-27",
+  "active_signers": "63589",
+  "transactions": "1217209",
+  "distinct_receivers": "66380"
+}, {
+  "date": "2026-09-28",
+  "active_signers": "61771",
+  "transactions": "1129793",
+  "distinct_receivers": "77770"
+}, {
+  "date": "2026-09-29",
+  "active_signers": "62990",
+  "transactions": "987627",
+  "distinct_receivers": "79598"
+}, {
+  "date": "2026-09-30",
+  "active_signers": "58749",
+  "transactions": "923526",
+  "distinct_receivers": "76093"
+}, {
+  "date": "2026-10-01",
+  "active_signers": "62105",
+  "transactions": "1151492",
+  "distinct_receivers": "86303"
+}, {
+  "date": "2026-10-02",
+  "active_signers": "118077",
+  "transactions": "868026",
+  "distinct_receivers": "134771"
+}, {
+  "date": "2026-10-03",
+  "active_signers": "176719",
+  "transactions": "690438",
+  "distinct_receivers": "191601"
+}, {
+  "date": "2026-10-04",
+  "active_signers": "177196",
+  "transactions": "839450",
+  "distinct_receivers": "193989"
+}, {
+  "date": "2026-10-05",
+  "active_signers": "95992",
+  "transactions": "865681",
+  "distinct_receivers": "140362"
+}, {
+  "date": "2026-10-06",
+  "active_signers": "124809",
+  "transactions": "909765",
+  "distinct_receivers": "139244"
+}, {
+  "date": "2026-10-07",
+  "active_signers": "175774",
+  "transactions": "971068",
+  "distinct_receivers": "189599"
+}, {
+  "date": "2026-10-08",
+  "active_signers": "82447",
+  "transactions": "1014850",
+  "distinct_receivers": "92581"
+}, {
+  "date": "2026-10-09",
+  "active_signers": "53950",
+  "transactions": "680332",
+  "distinct_receivers": "63761"
+}, {
+  "date": "2026-10-10",
+  "active_signers": "56881",
+  "transactions": "850344",
+  "distinct_receivers": "62222"
+}, {
+  "date": "2026-10-11",
+  "active_signers": "54865",
+  "transactions": "1109584",
+  "distinct_receivers": "63831"
+}, {
+  "date": "2026-10-12",
+  "active_signers": "59164",
+  "transactions": "712621",
+  "distinct_receivers": "68190"
+}, {
+  "date": "2026-10-13",
+  "active_signers": "55685",
+  "transactions": "731054",
+  "distinct_receivers": "64510"
+}, {
+  "date": "2026-10-14",
+  "active_signers": "58615",
+  "transactions": "767812",
+  "distinct_receivers": "66780"
+}, {
+  "date": "2026-10-15",
+  "active_signers": "55503",
+  "transactions": "911980",
+  "distinct_receivers": "64882"
+}, {
+  "date": "2026-10-16",
+  "active_signers": "54936",
+  "transactions": "658427",
+  "distinct_receivers": "65118"
+}, {
+  "date": "2026-10-17",
+  "active_signers": "54322",
+  "transactions": "557903",
+  "distinct_receivers": "62972"
+}, {
+  "date": "2026-10-18",
+  "active_signers": "51810",
+  "transactions": "569735",
+  "distinct_receivers": "62088"
+}, {
+  "date": "2026-10-19",
+  "active_signers": "53107",
+  "transactions": "607019",
+  "distinct_receivers": "72553"
+}, {
+  "date": "2026-10-20",
+  "active_signers": "52116",
+  "transactions": "617990",
+  "distinct_receivers": "73521"
+}, {
+  "date": "2026-10-21",
+  "active_signers": "53919",
+  "transactions": "658784",
+  "distinct_receivers": "71209"
+}, {
+  "date": "2026-10-22",
+  "active_signers": "51423",
+  "transactions": "547267",
+  "distinct_receivers": "49838"
+}, {
+  "date": "2026-10-23",
+  "active_signers": "51214",
+  "transactions": "609236",
+  "distinct_receivers": "70740"
+}, {
+  "date": "2026-10-24",
+  "active_signers": "50178",
+  "transactions": "635438",
+  "distinct_receivers": "69727"
+}, {
+  "date": "2026-10-25",
+  "active_signers": "49245",
+  "transactions": "550250",
+  "distinct_receivers": "56987"
+}, {
+  "date": "2026-10-26",
+  "active_signers": "49601",
+  "transactions": "573801",
+  "distinct_receivers": "56938"
+}, {
+  "date": "2026-10-27",
+  "active_signers": "61855",
+  "transactions": "604320",
+  "distinct_receivers": "69740"
+}, {
+  "date": "2026-10-28",
+  "active_signers": "49273",
+  "transactions": "520096",
+  "distinct_receivers": "57839"
+}, {
+  "date": "2026-10-29",
+  "active_signers": "49292",
+  "transactions": "649103",
+  "distinct_receivers": "58354"
+}, {
+  "date": "2026-10-30",
+  "active_signers": "47349",
+  "transactions": "691420",
+  "distinct_receivers": "81755"
+}, {
+  "date": "2026-10-31",
+  "active_signers": "46019",
+  "transactions": "502649",
+  "distinct_receivers": "66453"
+}, {
+  "date": "2026-11-01",
+  "active_signers": "46478",
+  "transactions": "509345",
+  "distinct_receivers": "78216"
+}, {
+  "date": "2026-11-02",
+  "active_signers": "48060",
+  "transactions": "522358",
+  "distinct_receivers": "68289"
+}, {
+  "date": "2026-11-03",
+  "active_signers": "72343",
+  "transactions": "597189",
+  "distinct_receivers": "82138"
+}, {
+  "date": "2026-11-04",
+  "active_signers": "79164",
+  "transactions": "706690",
+  "distinct_receivers": "82678"
+}, {
+  "date": "2026-11-05",
+  "active_signers": "78560",
+  "transactions": "848794",
+  "distinct_receivers": "95578"
+}, {
+  "date": "2026-11-06",
+  "active_signers": "78574",
+  "transactions": "717484",
+  "distinct_receivers": "93346"
+}, {
+  "date": "2026-11-07",
+  "active_signers": "77076",
+  "transactions": "682432",
+  "distinct_receivers": "91156"
+}, {
+  "date": "2026-11-08",
+  "active_signers": "79184",
+  "transactions": "609504",
+  "distinct_receivers": "95742"
+}, {
+  "date": "2026-11-09",
+  "active_signers": "77752",
+  "transactions": "895302",
+  "distinct_receivers": "163499"
+}, {
+  "date": "2026-11-10",
+  "active_signers": "177510",
+  "transactions": "970505",
+  "distinct_receivers": "149504"
+}, {
+  "date": "2026-11-11",
+  "active_signers": "77831",
+  "transactions": "891297",
+  "distinct_receivers": "131195"
+}, {
+  "date": "2026-11-12",
+  "active_signers": "85370",
+  "transactions": "891523",
+  "distinct_receivers": "130329"
+}]
