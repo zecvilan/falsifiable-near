@@ -1,0 +1,57 @@
+name: Refresh evidence
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: make test
+      - run: make docs-check
+
+  refresh:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (includes frozen-threshold hash check)
+        run: make test
+      - name: Rebuild snapshot from NearBlocks + DefiLlama
+        run: make data
+      - name: Regenerate document numbers
+        run: make docs
+      - name: Commit if the evidence changed
+        run: |
+          # generatedAt changes on every run; only commit when the data itself moved.
+          if git diff --quiet -I '"generatedAt"' -- data/public.json; then
+            echo "No new data."
+            exit 0
+          fi
+          AS_OF=$(python3 -c "import json;print(json.load(open('data/public.json'))['asOf'])")
+          SCORE=$(python3 -c "import json;t=json.load(open('data/public.json'))['tests'];print(f\"{sum(x['result']=='pass' for x in t)}/{len(t)}\")")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/public.json THESIS.md README.md
+          git commit -m "data: snapshot ${AS_OF} (${SCORE} pass, thresholds-v1)"
+          git push
