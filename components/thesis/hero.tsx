@@ -8,7 +8,7 @@ import { VerdictCard } from './verdict-card'
 
 export function Hero({ data, live }: { data: ThesisData; live?: LiveData }) {
   const m = data.metrics
-  const weeks = Math.max(data.history.length - 1, 0)
+  const gradings = data.history.length
   const resultOf = (id: string) => data.tests.find((t) => t.id === id)?.result
   const takeRateBps = m.intents_take_rate_90d != null ? `${(m.intents_take_rate_90d * 10_000).toFixed(2)} bps` : '—'
 
@@ -52,7 +52,7 @@ export function Hero({ data, live }: { data: ThesisData; live?: LiveData }) {
                 className="group inline-flex h-12 items-center gap-2.5 font-medium focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
               >
                 <span className="border-b-2 border-primary pb-0.5 transition-colors group-hover:border-foreground">
-                  {weeks}-week track record
+                  {gradings} weekly gradings
                 </span>
                 <ArrowRight aria-hidden="true" className="size-4 transition-transform group-hover:translate-x-0.5" />
               </a>

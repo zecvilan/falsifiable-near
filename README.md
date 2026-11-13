@@ -82,6 +82,13 @@ app/api/live                 live pulse (NearBlocks stats + DefiLlama, 5-min cac
 3. **No invented data:** an unqueried source renders as unavailable, never as sample data.
 4. **No hand-typed numbers:** figures in the documents are generated from the snapshot (`make docs`), and CI fails if they are stale.
 
+## Hackathon disclosure
+
+- **Built for:** NEAR HACKATHON (Nov 2026), track `thesis`. All code and data in this repository were produced during the hackathon window.
+- **Thresholds:** frozen at git tag [`thresholds-v1`](../../tree/thresholds-v1); `scripts/test_fetch_public.py` pins their hash.
+- **Libraries and tools:** Next.js 16, React 19, Tailwind CSS 4, shadcn/ui, Recharts, SWR; Python 3 standard library for the keyless pipeline; `google-cloud-bigquery` for the optional raw-chain pipeline. Code was written with AI assistance (v0 by Vercel).
+- **Data sources:** NearBlocks API, DefiLlama API, BigQuery public dataset `crypto_near_mainnet_us` (optional), NEAR Intents Explorer API (optional).
+
 ## License
 
 [MIT](./LICENSE). Not investment advice.

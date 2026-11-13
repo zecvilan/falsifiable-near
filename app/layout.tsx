@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     description: 'Judged on the evidence, not the conviction. Six tests with frozen thresholds, live data, re-runnable models.',
     type: 'article',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Falsifiable NEAR',
+    description: 'A NEAR thesis that can fail in public. Six tests, frozen thresholds, re-graded daily on public data.',
+  },
   icons: {
     icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
   },
