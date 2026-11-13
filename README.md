@@ -10,6 +10,14 @@ Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-t
 - **Dashboard:** Next.js app that renders the snapshot: scorecard, charts, lead/lag test, interactive scenario model, and a live pulse.
 - **Data:** [`data/public.json`](./data/public.json), produced by one keyless command.
 
+## For judges: verify in 5 steps
+
+1. Open https://falsifiable-near-sand.vercel.app → the **Verdict today** card shows how many of the six claims hold, and the **Live pulse** strip shows current NEAR price, TPS and Intents volume (server-rendered, refreshed every 5 min).
+2. Scroll to **Falsification scorecard** → each claim shows its current value, its frozen pass/fail threshold and its data source.
+3. Open `/data/public.json` on the site → the same numbers as raw JSON. Every figure on the page is read from this file.
+4. Locally, run `make data && make test` → the snapshot is rebuilt from public APIs (no keys) and the tests pass, including the hash check that fails if any threshold is edited.
+5. Run `make dev` and open the **Scenario model** → change growth, take rate or issuance and watch year-5 coverage and break-even growth update.
+
 <!-- auto:readme-results -->
 ## Result (snapshot 2026-11-12)
 

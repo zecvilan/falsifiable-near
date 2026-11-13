@@ -3,9 +3,10 @@ import type { ThesisData } from '@/lib/data'
 import { fmtChange, fmtPct, fmtRatio, fmtUsd } from '@/lib/format'
 import { Stat, toneOf } from './primitives'
 import { LivePulse } from './live-pulse'
+import type { LiveData } from '@/lib/live'
 import { VerdictCard } from './verdict-card'
 
-export function Hero({ data }: { data: ThesisData }) {
+export function Hero({ data, live }: { data: ThesisData; live?: LiveData }) {
   const m = data.metrics
   const weeks = Math.max(data.history.length - 1, 0)
   const resultOf = (id: string) => data.tests.find((t) => t.id === id)?.result
@@ -81,7 +82,7 @@ export function Hero({ data }: { data: ThesisData }) {
         </div>
 
         <div className="pt-12 md:pt-16">
-          <LivePulse snapshotPrice={m.price_usd_7d} />
+          <LivePulse snapshotPrice={m.price_usd_7d} initial={live} />
         </div>
       </div>
     </section>

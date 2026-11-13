@@ -2,17 +2,7 @@
 
 import useSWR from 'swr'
 import { fmtNum, fmtUsd } from '@/lib/format'
-
-interface LiveData {
-  fetchedAt: string
-  priceUsd: number | null
-  change24hPct: number | null
-  tps: number | null
-  totalTxns: number | null
-  intents24hUsd: number | null
-  intents7dUsd: number | null
-  errors: string[]
-}
+import type { LiveData } from '@/lib/live'
 
 const fetcher = (url: string) =>
   fetch(url).then((res) => {
@@ -20,8 +10,11 @@ const fetcher = (url: string) =>
     return res.json() as Promise<LiveData>
   })
 
-export function LivePulse({ snapshotPrice }: { snapshotPrice: number | null }) {
-  const { data, error, isLoading } = useSWR('/api/live', fetcher, { refreshInterval: 60_000 })
+export function LivePulse({ snapshotPrice, initial }: { snapshotPrice: number | null; initial?: LiveData }) {
+  const { data, error, isLoading } = useSWR('/api/live', fetcher, {
+    refreshInterval: 60_000,
+    fallbackData: initial && initial.errors.length < 2 ? initial : undefined,
+  })
 
   const items = [
     { label: 'NEAR price', value: data?.priceUsd != null ? `$${data.priceUsd.toFixed(2)}` : '—' },
@@ -50,7 +43,7 @@ export function LivePulse({ snapshotPrice }: { snapshotPrice: number | null }) {
           {error
             ? 'Live sources unreachable; snapshot below is unaffected'
             : data
-              ? `Updated ${new Date(data.fetchedAt).toLocaleTimeString()} · refreshes every 60s`
+              ? `Updated ${data.fetchedAt.slice(11, 16)} UTC · refreshes every 60s`
               : 'Loading…'}
         </p>
       </div>

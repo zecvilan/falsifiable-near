@@ -1,4 +1,5 @@
 import { getThesisData } from '@/lib/data'
+import { getLiveData } from '@/lib/live'
 import { SiteHeader } from '@/components/thesis/site-header'
 import { Hero } from '@/components/thesis/hero'
 import { VerifyStrip } from '@/components/thesis/verify-strip'
@@ -13,15 +14,18 @@ import { RawChainSection } from '@/components/thesis/raw-chain-section'
 import { Methodology } from '@/components/thesis/methodology'
 import { SiteFooter } from '@/components/thesis/site-footer'
 
-export default function Page() {
+export const revalidate = 300
+
+export default async function Page() {
   const data = getThesisData()
   const m = data.metrics
+  const live = await getLiveData(3000)
 
   return (
     <>
       <SiteHeader asOf={data.asOf} />
       <main className="flex w-full flex-col">
-        <Hero data={data} />
+        <Hero data={data} live={live} />
         <div className="mx-auto flex w-full max-w-7xl flex-col gap-24 px-4 pb-24 pt-12 md:gap-32 md:px-8 md:pt-16">
           <VerifyStrip preregistration={data.preregistration} />
           <Scorecard tests={data.tests} preregistration={data.preregistration} sources={data.sources} />
