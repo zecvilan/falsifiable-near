@@ -74,10 +74,6 @@ app/api/live                 live pulse (NearBlocks stats + DefiLlama, 5-min cac
 3. **No invented data:** an unqueried source renders as unavailable, never as sample data.
 4. **No hand-typed numbers:** figures in the documents are generated from the snapshot (`make docs`), and CI fails if they are stale.
 
-## Team
-
-- **Name:** _your name / team_ · **Contact:** _email or handle_
-
 ## License
 
 [MIT](./LICENSE). Not investment advice.
