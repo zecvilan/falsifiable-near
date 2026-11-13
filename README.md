@@ -2,6 +2,8 @@
 
 *A NEAR investment thesis that can fail in public.*
 
+**Live dashboard:** https://falsifiable-near-sand.vercel.app
+
 Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-term case. Judged on the evidence, not the conviction."*
 
 - **Thesis:** [`THESIS.md`](./THESIS.md). NEAR's value engine has moved from blockspace to Intents, and the case holds only if captured Intents revenue outgrows dilution.
