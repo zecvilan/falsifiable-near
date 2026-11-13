@@ -1,0 +1,131 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --color-pass: var(--pass);
+  --color-pass-ink: var(--pass-ink);
+  --color-fail: var(--fail);
+  --color-warn: var(--warn);
+  --color-primary-deep: var(--primary-deep);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+@theme inline {
+  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+  Palette: paper (mint off-white), ink, NEAR green, signal red, amber.
+  --pass / --primary are fills only; green text on paper uses --pass-ink.
+*/
+:root {
+  color-scheme: light;
+  --background: #f3f7f4;
+  --foreground: #0a0f0c;
+  --card: #ffffff;
+  --card-foreground: #0a0f0c;
+  --popover: #ffffff;
+  --popover-foreground: #0a0f0c;
+  --primary: #00ec97;
+  --primary-foreground: #04140d;
+  --primary-deep: #005c3b;
+  --secondary: #e8eeea;
+  --secondary-foreground: #0a0f0c;
+  --muted: #e8eeea;
+  --muted-foreground: #56615b;
+  --accent: #e8eeea;
+  --accent-foreground: #0a0f0c;
+  --destructive: #d81e2c;
+  --border: #d3dbd6;
+  --input: #b9c3bd;
+  --ring: #0a0f0c;
+  --pass: #00ec97;
+  --pass-ink: #006b45;
+  --fail: #d81e2c;
+  --warn: #b45f06;
+  --chart-1: #00ec97;
+  --chart-2: #0a0f0c;
+  --chart-3: #3f4b45;
+  --chart-4: #d81e2c;
+  --chart-5: #a7b2ac;
+  --radius: 0rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .panel {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+  }
+
+  .label-mono {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    line-height: 1.3;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+  }
+
+  .marker {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: 0 0.12em 0.04em;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+}

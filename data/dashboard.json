@@ -1,0 +1,22 @@
+{
+  "generatedAt": null,
+  "window": null,
+  "onchain": [],
+  "contracts": [],
+  "intents": [],
+  "intents_daily": [],
+  "sources": {
+    "bigquery": {
+      "status": "not_run",
+      "dataset": "bigquery-public-data.crypto_near_mainnet_us",
+      "message": "Run `make rebuild` with GOOGLE_CLOUD_PROJECT set to populate raw-chain metrics."
+    },
+    "intents": {
+      "status": "not_configured",
+      "message": "Set NEAR_INTENTS_JWT from the Explorer Partner Dashboard to fetch per-swap activity."
+    }
+  },
+  "limitations": [
+    "Starter snapshot: no BigQuery observations yet. Nothing on the dashboard is invented to fill this gap."
+  ]
+}
