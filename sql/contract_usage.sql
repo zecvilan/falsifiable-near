@@ -5,11 +5,12 @@ SELECT
   COUNT(DISTINCT rot.originated_from_transaction_hash) AS originating_transactions,
   COUNT(DISTINCT t.signer_account_id) AS initiating_signer_days
 FROM `bigquery-public-data.crypto_near_mainnet_us.receipt_actions` AS ra
-JOIN `bigquery-public-data.crypto_near_mainnet_us.receipt_origin` AS rot
+JOIN `bigquery-public-data.crypto_near_mainnet_us.receipt_origin_transaction` AS rot
   ON rot.receipt_id = ra.receipt_id
 JOIN `bigquery-public-data.crypto_near_mainnet_us.transactions` AS t
   ON t.transaction_hash = rot.originated_from_transaction_hash
 WHERE ra.block_date BETWEEN @start_date AND @end_date
+  AND rot.block_date BETWEEN @start_date AND @end_date
   AND t.block_date BETWEEN @start_date AND @end_date
   AND ra.action_kind = 'FUNCTION_CALL'
 GROUP BY ra.block_date, contract_account
