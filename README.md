@@ -53,7 +53,7 @@ pip install -r requirements.txt
 make dry-run && make rebuild    # writes data/dashboard.json
 ```
 
-No billed project? Run [`sql/daily_usage.sql`](./sql/daily_usage.sql) in the BigQuery console (the free sandbox works; replace `@start_date`/`@end_date` with literal dates), save the result as JSON to `data/bigquery/daily_usage.raw.json` (and `sql/contract_usage.sql` to `contract_usage.raw.json`), then run `make bq-import`. It writes `data/dashboard.json` with a week-by-week cross-check against NearBlocks. The committed exports (2026-08-15 → 2026-11-12) match NearBlocks' daily active accounts and transactions exactly in all 13 comparable weeks.
+No billed project? Run [`sql/daily_usage.sql`](./sql/daily_usage.sql) in the BigQuery console (the free sandbox works; replace `@start_date`/`@end_date` with literal dates), save the result as JSON to `data/bigquery/daily_usage.raw.json` (and `sql/contract_usage.sql` to `contract_usage.raw.json`), then run `make bq-import`. It writes `data/dashboard.json` with a week-by-week cross-check against NearBlocks. The committed exports (2026-08-15 → 2026-11-12) match NearBlocks' daily active accounts and transactions exactly in all 13 comparable weeks (12 full weeks plus one 4-day partial week, compared on daily averages rounded to whole numbers; the first two days of the export, 2026-08-15 and 2026-08-16, are not compared).
 
 ## Repository layout
 
