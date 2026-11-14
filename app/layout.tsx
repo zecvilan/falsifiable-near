@@ -7,7 +7,7 @@ const geistSans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' })
 const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://falsifiable-near-sand.vercel.app'),
+  metadataBase: new URL('https://falsifiable-near-two.vercel.app'),
   title: 'Falsifiable NEAR — A NEAR thesis that can fail in public',
   applicationName: 'Falsifiable NEAR',
   description:

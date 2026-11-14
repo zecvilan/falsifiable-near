@@ -97,7 +97,18 @@ interface BigQuerySnapshot {
     initiating_signer_days: number
   }[]
   intents: { month: string; volume_usd: number; completed_swaps: number }[]
-  sources: Record<string, { status: string; message?: string }>
+  crosscheck?: {
+    weekly: {
+      period: string
+      days: number
+      bigquery_signers_avg: number
+      nearblocks_active_avg: number
+      bigquery_txns_avg: number
+      nearblocks_txns_avg: number
+    }[]
+    summary: { weeks: number; exact_weeks: number; signers_ratio: number | null; txns_ratio: number | null }
+  }
+  sources: Record<string, { status: string; message?: string; mode?: string }>
   limitations: string[]
 }
 
@@ -170,7 +181,9 @@ export function getThesisData() {
       generatedAt: bigquery.generatedAt,
       window: bigquery.window,
       onchain: bigquery.onchain,
+      mode: bigquery.sources.bigquery?.mode ?? 'live',
       topContracts: topContracts(bigquery.contracts),
+      crosscheck: bigquery.crosscheck ?? null,
       limitations: bigquery.limitations,
     },
   }

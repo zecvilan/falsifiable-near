@@ -12,7 +12,7 @@ Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-t
 
 ## For judges: verify in 5 steps
 
-1. Open https://falsifiable-near-sand.vercel.app → the **Verdict today** card shows how many of the six claims hold, and the **Live pulse** strip shows current NEAR price, TPS and Intents volume (server-rendered, refreshed every 5 min).
+1. Open https://falsifiable-near-two.vercel.app → the **Verdict today** card shows how many of the six claims hold, and the **Live pulse** strip shows current NEAR price, TPS and Intents volume (refreshed every 15 s with a live "updated Xs ago" clock).
 2. Scroll to **Falsification scorecard** → each claim shows its current value, its frozen pass/fail threshold and its data source.
 3. Open `/data/public.json` on the site → the same numbers as raw JSON. Every figure on the page is read from this file.
 4. Locally, run `make data && make test` → the snapshot is rebuilt from public APIs (no keys) and the tests pass, including the hash check that fails if any threshold is edited.
@@ -53,12 +53,15 @@ pip install -r requirements.txt
 make dry-run && make rebuild    # writes data/dashboard.json
 ```
 
+No billed project? Run [`sql/daily_usage.sql`](./sql/daily_usage.sql) in the BigQuery console (the free sandbox works; replace `@start_date`/`@end_date` with literal dates), save the result as JSON to `data/bigquery/daily_usage.raw.json` (and `sql/contract_usage.sql` to `contract_usage.raw.json`), then run `make bq-import`. It writes `data/dashboard.json` with a week-by-week cross-check against NearBlocks. The committed exports (2026-08-15 → 2026-11-12) match NearBlocks' daily active accounts and transactions exactly in all 13 comparable weeks.
+
 ## Repository layout
 
 ```
 THESIS.md                    thesis, tests, falsifiers, model, risks
 data/public.json             keyless evidence snapshot (rendered by the dashboard)
-data/dashboard.json          BigQuery/Explorer snapshot (empty until `make rebuild`)
+data/dashboard.json          BigQuery/Explorer snapshot (empty until `make rebuild` or `make bq-import`)
+scripts/import_bigquery.py   imports a BigQuery console export + NearBlocks cross-check
 scripts/fetch_public.py      keyless pipeline + frozen-threshold tests + lead/lag
 scripts/render_docs.py       writes the numbers in THESIS.md / README.md from the snapshot
 scripts/test_fetch_public.py unit tests
@@ -74,6 +77,8 @@ app/api/live                 live pulse (NearBlocks stats + DefiLlama, 5-min cac
 ## Live updates
 
 `.github/workflows/refresh.yml` runs every day at 06:00 UTC (and on demand). It runs `make data`, `make test` and `make docs`, then commits the new snapshot only if the data changed. The commit history of `data/public.json` is therefore a dated record of every grading. Pushes and pull requests also run `make test` and `make docs-check`.
+
+**Out-of-sample status at submission:** the thresholds were frozen on 2026-11-13 and the upstream sources currently end on 2026-11-12, so there are no out-of-sample gradings yet. The first one is committed by the daily job as soon as NearBlocks and DefiLlama publish data past 2026-11-12; every one after it is graded with the same frozen rules.
 
 ## Principles
 
