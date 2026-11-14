@@ -44,7 +44,7 @@ export function Methodology({
           <div className="panel p-5">
             <h3 className="mb-3 font-medium">Re-run the analysis</h3>
             <pre className="max-w-full min-w-0 overflow-x-auto bg-foreground p-4 font-mono text-xs leading-relaxed text-background">
-              <code>{`git clone <this repo> && cd near-thesis
+              <code>{`git clone https://github.com/zecvilan/falsifiable-near && cd falsifiable-near
 make data    # python3 scripts/fetch_public.py  (stdlib only)
 make test    # unit tests for the statistics + aggregation
 make dev     # dashboard at http://localhost:3000`}</code>
