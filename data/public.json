@@ -13590,7 +13590,7 @@
  "preregistration": {
   "thresholds_tag": "thresholds-v1",
   "thresholds_sha256": "b9548c7a9ca04a4cedb63863fa554d5da8ed98ce10af8b062592696edb92d4e9",
-  "frozen_on": "2026-11-14",
+  "frozen_on": "2026-11-13",
   "in_sample_snapshot": "2026-11-12",
   "out_of_sample": false
  }

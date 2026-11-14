@@ -45,7 +45,7 @@ What is fixed is everything after that. The thresholds live in one constant, `TH
 | T5 | Buybacks and burn outweigh new token issuance | (Annualised Intents holders revenue + gas burn) / annual gross issuance value | pass ≥ 1.00x · fail < 0.25x · otherwise inconclusive | 0.19× | **Fail** |
 | T6 | Intents activity moves before the NEAR price | Max weekly lead correlation (1–4w) vs Bonferroni critical r | pass if best leading r > critical r (0.2513) over 99 weeks · otherwise fail | 0.079 | **Fail** |
 
-Thresholds `sha256:b9548c7a9ca04a4c…` at tag `thresholds-v1`, frozen 2026-11-14.
+Thresholds `sha256:b9548c7a9ca04a4c…` at tag `thresholds-v1`, frozen 2026-11-13.
 <!-- /auto:tests -->
 
 Values between pass and fail are graded *inconclusive*. Missing inputs are graded *insufficient data*, never imputed.

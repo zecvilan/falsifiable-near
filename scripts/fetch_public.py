@@ -52,7 +52,7 @@ THRESHOLDS: dict[str, dict[str, float]] = {
     "T6": {"max_lag_weeks": 4, "bonferroni_z": 2.50},
 }
 THRESHOLDS_TAG = "thresholds-v1"
-THRESHOLDS_FROZEN_ON = "2026-11-14"
+THRESHOLDS_FROZEN_ON = "2026-11-13"
 IN_SAMPLE_SNAPSHOT = "2026-11-12"
 
 
