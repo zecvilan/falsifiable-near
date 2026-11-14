@@ -78,7 +78,7 @@ app/api/live                   live pulse (NearBlocks stats + DefiLlama, 5-min c
 
 `.github/workflows/refresh.yml` runs every day at 06:00 UTC (and on demand). It runs `make data`, `make test` and `make docs`, then commits the new snapshot only if the data changed. The commit history of `data/public.json` is therefore a dated record of every grading. Pushes and pull requests also run `make test` and `make docs-check`.
 
-**Out-of-sample status at submission:** the thresholds were frozen on 2026-11-13 and the upstream sources currently end on 2026-11-12, so there are no out-of-sample gradings yet. The first one is committed by the daily job as soon as NearBlocks and DefiLlama publish data past 2026-11-12; every one after it is graded with the same frozen rules.
+**Out-of-sample status at submission:** the thresholds were frozen on 2026-11-13 (22:55 UTC), after the 2026-11-12 data had been seen. The 2026-11-13 snapshot (3/6) is the first grading on data published after the freeze, so it is the first out-of-sample result; every later daily grading is added by the daily job and graded with the same frozen rules.
 
 ## Principles
 

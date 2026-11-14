@@ -33,7 +33,7 @@ This is deliberately narrower than "chain abstraction will win." It names a mech
 
 What is fixed is everything after that. The thresholds live in one constant, `THRESHOLDS` in `scripts/fetch_public.py`, and were frozen at git tag `thresholds-v1` (commit `2d75871`, 2026-11-13 22:55 UTC). A unit test pins their SHA-256 hash, so CI fails if anyone tunes them. Every later rebuild, including the daily automated one, is graded with exactly these rules, and the results on data published after the in-sample snapshot are the genuinely out-of-sample evidence. A test may flip in either direction. Any future change requires a new tag and a note in this section.
 
-**Track record.** `data/public.json → history` re-grades all six tests at 27 weekly cut-offs (2026-05-14 to 2026-11-12) with the same frozen rules (score 1/6 in May 2026 → 3/6 in November; T4 flipped to pass in late September). Those backfilled points are look-ahead by construction and are shown only as a description of how the claims would have read. Points after the in-sample snapshot are the out-of-sample record.
+**Track record.** `data/public.json → history` re-grades all six tests at 27 weekly cut-offs (2026-05-15 to 2026-11-13) with the same frozen rules (score 1/6 in May 2026 → 3/6 in November; T4 flipped to pass in late September). Those backfilled points are look-ahead by construction and are shown only as a description of how the claims would have read. Points after the in-sample snapshot are the out-of-sample record.
 
 <!-- auto:tests -->
 | ID | Claim | Metric | Rule | Value | Result |
