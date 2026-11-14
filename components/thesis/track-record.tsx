@@ -56,7 +56,7 @@ export function TrackRecord({
             <span className="font-medium text-foreground">Read this as descriptive.</span> These weeks are backfilled with
             rules chosen in November 2026, after the data was seen, so they show how the claims would have read, not a
             forecast that came true. Columns after {fmtDate(preregistration.in_sample_snapshot)} are out-of-sample:{' '}
-            <span className="font-mono text-foreground">{outOfSample}</span> so far, one added by each daily rebuild.
+            <span className="font-mono text-foreground">{outOfSample}</span> so far. The weekly grid is anchored to the latest snapshot, so the count grows by one each week; every committed snapshot stays in git history.
           </p>
         </div>
       }
