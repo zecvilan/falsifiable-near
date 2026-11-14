@@ -30,7 +30,7 @@ Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-t
 | T5 | Buybacks and burn outweigh new token issuance | 0.19× | Fail |
 | T6 | Intents activity moves before the NEAR price | 0.079 | Fail |
 
-**Track record:** 27 weekly gradings with the same rules, 1/6 on 2026-05-15 → 3/6 on 2026-11-13. 1 of them are out-of-sample; the rest are backfilled and descriptive.
+**Track record:** 27 weekly gradings with the same rules, 1/6 on 2026-05-15 → 3/6 on 2026-11-13. 1 of them is out-of-sample; the rest are backfilled and descriptive.
 
 Graded with thresholds frozen at tag `thresholds-v1`; this snapshot is out-of-sample.
 <!-- /auto:readme-results -->

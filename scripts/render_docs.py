@@ -184,7 +184,7 @@ def block_readme_results(s: dict) -> str:
     hist = s.get("history") or []
     if hist:
         lines += ["", f"**Track record:** {len(hist)} weekly gradings with the same rules, {hist[0]['passed']}/6 on {hist[0]['asOf']} → {hist[-1]['passed']}/6 on {hist[-1]['asOf']}. "
-                  f"{sum(not p['in_sample'] for p in hist)} of them are out-of-sample; the rest are backfilled and descriptive."]
+                  f"{(n_oos := sum(not p['in_sample'] for p in hist))} of them {'is' if n_oos == 1 else 'are'} out-of-sample; the rest are backfilled and descriptive."]
     pre = s.get("preregistration")
     if pre:
         sample = "out-of-sample" if pre.get("out_of_sample") else f"in-sample (the thresholds were set after seeing the {pre['in_sample_snapshot']} snapshot)"
