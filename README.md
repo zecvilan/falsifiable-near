@@ -58,20 +58,20 @@ No billed project? Run [`sql/daily_usage.sql`](./sql/daily_usage.sql) in the Big
 ## Repository layout
 
 ```
-THESIS.md                    thesis, tests, falsifiers, model, risks
-data/public.json             keyless evidence snapshot (rendered by the dashboard)
-data/dashboard.json          BigQuery/Explorer snapshot (empty until `make rebuild` or `make bq-import`)
-scripts/import_bigquery.py   imports a BigQuery console export + NearBlocks cross-check
-scripts/fetch_public.py      keyless pipeline + frozen-threshold tests + lead/lag
-scripts/render_docs.py       writes the numbers in THESIS.md / README.md from the snapshot
-scripts/test_fetch_public.py unit tests
-.github/workflows/refresh.yml daily rebuild: data → tests → docs → commit
-scripts/rebuild.py           BigQuery + Intents Explorer pipeline
-sql/daily_usage.sql          daily signers / transactions
-sql/contract_usage.sql       top-25 contracts per day by receipts
-lib/model.ts                 scenario model (coverage, break-even growth)
-app/, components/thesis/     dashboard
-app/api/live                 live pulse (NearBlocks stats + DefiLlama, 5-min cache)
+THESIS.md                      thesis, tests, falsifiers, model, risks
+data/public.json               keyless evidence snapshot (rendered by the dashboard)
+data/dashboard.json            BigQuery/Explorer snapshot (empty until make rebuild / bq-import)
+scripts/import_bigquery.py     imports a BigQuery console export + NearBlocks cross-check
+scripts/fetch_public.py        keyless pipeline + frozen-threshold tests + lead/lag
+scripts/render_docs.py         writes the numbers in THESIS.md / README.md from the snapshot
+scripts/test_fetch_public.py   unit tests
+.github/workflows/refresh.yml  daily rebuild: data → tests → docs → commit
+scripts/rebuild.py             BigQuery + Intents Explorer pipeline
+sql/daily_usage.sql            daily signers / transactions
+sql/contract_usage.sql         top-25 contracts per day by receipts
+lib/model.ts                   scenario model (coverage, break-even growth)
+app/, components/thesis/       dashboard
+app/api/live                   live pulse (NearBlocks stats + DefiLlama, 5-min cache)
 ```
 
 ## Live updates
