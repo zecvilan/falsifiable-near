@@ -83,7 +83,7 @@ app/api/live                 live pulse (NearBlocks stats + DefiLlama, 5-min cac
 ## Principles
 
 1. **Evidence over conviction:** every claim maps to a metric, a source, and a re-runnable command.
-2. **Frozen, not retro-fitted:** thresholds were set after a first look at the 2026-11-12 data (disclosed in THESIS.md §3), then frozen at tag `thresholds-v1`. A hash test blocks later tuning, so every rebuild since is out-of-sample. Failing tests stay on the page.
+2. **Frozen after a first look, and disclosed:** thresholds were set after a first look at the 2026-11-12 data (disclosed in THESIS.md §3), then frozen at tag `thresholds-v1`. A hash test blocks later tuning, so only gradings on data published after 2026-11-12 count as out-of-sample. Failing tests stay on the page.
 3. **No invented data:** an unqueried source renders as unavailable, never as sample data.
 4. **No hand-typed numbers:** figures in the documents are generated from the snapshot (`make docs`), and CI fails if they are stale.
 
