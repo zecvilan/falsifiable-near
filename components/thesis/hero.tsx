@@ -5,6 +5,7 @@ import { Stat, toneOf } from './primitives'
 import { LivePulse } from './live-pulse'
 import type { LiveData } from '@/lib/live'
 import { VerdictCard } from './verdict-card'
+import { ScoreTrend } from './score-trend'
 
 export function Hero({ data, live }: { data: ThesisData; live?: LiveData }) {
   const m = data.metrics
@@ -77,7 +78,10 @@ export function Hero({ data, live }: { data: ThesisData; live?: LiveData }) {
             </dl>
           </div>
 
-          <VerdictCard tests={data.tests} asOf={data.asOf} firstPoint={data.history[0]} />
+          <div className="flex flex-col gap-6">
+            <VerdictCard tests={data.tests} asOf={data.asOf} firstPoint={data.history[0]} />
+            <ScoreTrend history={data.history} />
+          </div>
         </div>
 
         <div className="pt-12 md:pt-16">
