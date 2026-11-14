@@ -2,7 +2,7 @@
 
 *A NEAR investment thesis that can fail in public.*
 
-**Live dashboard:** https://falsifiable-near-sand.vercel.app
+**Live dashboard:** https://falsifiable-near-two.vercel.app/
 
 Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-term case. Judged on the evidence, not the conviction."*
 
