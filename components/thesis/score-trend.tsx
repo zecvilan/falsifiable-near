@@ -15,6 +15,7 @@ export function ScoreTrend({ history }: { history: ThesisData['history'] }) {
     .join(' ')
   const first = history[0]
   const last = history[history.length - 1]
+  const outOfSample = history.filter((h) => !h.in_sample).length
 
   return (
     <figure className="border border-border p-4">
@@ -37,7 +38,9 @@ export function ScoreTrend({ history }: { history: ThesisData['history'] }) {
         <circle cx={x(history.length - 1)} cy={y(last.passed)} r={4.5} className="fill-primary stroke-foreground" strokeWidth={1.5} />
       </svg>
       <p className="pt-3 text-xs leading-relaxed text-muted-foreground">
-        Backfilled with the frozen rules, so descriptive only. Not out-of-sample.
+        {outOfSample === 0
+          ? 'Backfilled with the frozen rules, so descriptive only. Out-of-sample points so far: 0.'
+          : `Earlier points are backfilled with the frozen rules, so descriptive only. Out-of-sample points so far: ${outOfSample}.`}
       </p>
     </figure>
   )
