@@ -16,7 +16,7 @@ const INTENTS_SUMMARY = 'https://api.llama.fi/summary/dexs/near-intents?dataType
 
 async function getJson(url: string, timeoutMs: number) {
   const res = await fetch(url, {
-    next: { revalidate: 300 },
+    next: { revalidate: 10 },
     headers: { Accept: 'application/json' },
     signal: AbortSignal.timeout(timeoutMs),
   })

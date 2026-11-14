@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import useSWR from 'swr'
 import { fmtNum, fmtUsd } from '@/lib/format'
 import type { LiveData } from '@/lib/live'
@@ -10,11 +11,34 @@ const fetcher = (url: string) =>
     return res.json() as Promise<LiveData>
   })
 
+const REFRESH_MS = 15_000
+
+function useNow(intervalMs = 1000) {
+  const [now, setNow] = useState<number | null>(null)
+  useEffect(() => {
+    setNow(Date.now())
+    const id = setInterval(() => setNow(Date.now()), intervalMs)
+    return () => clearInterval(id)
+  }, [intervalMs])
+  return now
+}
+
+function statusLine(fetchedAt: string, now: number | null, validating: boolean) {
+  const time = `${fetchedAt.slice(11, 19)} UTC`
+  if (now == null) return `Updated ${time}`
+  if (validating) return `Updated ${time} · refreshing…`
+  const age = Math.max(0, Math.floor((now - Date.parse(fetchedAt)) / 1000))
+  const ago = age < 60 ? `${age}s ago` : `${Math.floor(age / 60)}m ${age % 60}s ago`
+  return `Updated ${time} · ${ago} · refreshes every ${REFRESH_MS / 1000}s`
+}
+
 export function LivePulse({ snapshotPrice, initial }: { snapshotPrice: number | null; initial?: LiveData }) {
-  const { data, error, isLoading } = useSWR('/api/live', fetcher, {
-    refreshInterval: 60_000,
+  const { data, error, isLoading, isValidating } = useSWR('/api/live', fetcher, {
+    refreshInterval: REFRESH_MS,
+    refreshWhenHidden: false,
     fallbackData: initial && initial.errors.length < 2 ? initial : undefined,
   })
+  const now = useNow()
 
   const items = [
     { label: 'NEAR price', value: data?.priceUsd != null ? `$${data.priceUsd.toFixed(2)}` : '—' },
@@ -39,11 +63,11 @@ export function LivePulse({ snapshotPrice, initial }: { snapshotPrice: number | 
           />
           Live pulse
         </p>
-        <p className="font-mono text-[11px] text-muted-foreground">
-          {error
+        <p className="font-mono text-[11px] tabular-nums text-muted-foreground" aria-live="off">
+          {error && !data
             ? 'Live sources unreachable; snapshot below is unaffected'
             : data
-              ? `Updated ${data.fetchedAt.slice(11, 16)} UTC · refreshes every 60s`
+              ? statusLine(data.fetchedAt, now, isValidating)
               : 'Loading…'}
         </p>
       </div>

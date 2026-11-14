@@ -15,8 +15,7 @@ export function Hero({ data, live }: { data: ThesisData; live?: LiveData }) {
   return (
     <section id="top" aria-labelledby="hero-title" className="border-b border-border">
       <div className="mx-auto flex max-w-7xl flex-col px-4 pb-12 md:px-8 md:pb-16">
-        <div className="label-mono flex flex-wrap items-center justify-between gap-x-8 gap-y-2 border-b border-border py-6">
-          <p>NEAR Hackathon · Investment Thesis Track</p>
+        <div className="label-mono flex flex-wrap items-center justify-end gap-x-8 gap-y-2 border-b border-border py-6">
           <p>A 3–5 year thesis, scored in public</p>
         </div>
 

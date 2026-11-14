@@ -45,7 +45,7 @@ export function SiteFooter() {
           <p>
             Falsifiable NEAR · Not investment advice · Built for <span className="text-foreground">NEAR Hackathon 2026</span>
           </p>
-          <p>Data: NearBlocks · DefiLlama · BigQuery public NEAR dataset (optional)</p>
+          <p>Data: NearBlocks · DefiLlama · BigQuery public NEAR dataset</p>
         </div>
       </div>
     </footer>

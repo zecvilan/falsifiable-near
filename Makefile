@@ -3,7 +3,7 @@ DAYS ?= 730
 BQ_DAYS ?= 365
 INTENTS_DAYS ?= 90
 
-.PHONY: data test docs docs-check dry-run rebuild dev all
+.PHONY: data test docs docs-check dry-run rebuild bq-import dev all
 
 ## Keyless: rebuild data/public.json from NearBlocks + DefiLlama (no credentials)
 data:
@@ -28,6 +28,11 @@ dry-run:
 ## BigQuery + Intents Explorer: rebuild data/dashboard.json (needs .env, see .env.example)
 rebuild:
 	$(PYTHON) scripts/rebuild.py --days $(BQ_DAYS) --intents-days $(INTENTS_DAYS)
+
+## Keyless alternative: import a BigQuery console export of sql/daily_usage.sql
+## (data/bigquery/daily_usage.raw.json) and cross-check it against NearBlocks
+bq-import:
+	$(PYTHON) scripts/import_bigquery.py
 
 ## Run the dashboard locally
 dev:
