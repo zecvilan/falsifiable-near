@@ -2,7 +2,7 @@
 
 *A NEAR investment thesis that can fail in public.*
 
-**Live dashboard:** https://falsifiable-near-two.vercel.app/
+**Live dashboard:** https://falsifiable-near-sand.vercel.app/
 
 Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-term case. Judged on the evidence, not the conviction."*
 
@@ -12,7 +12,7 @@ Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-t
 
 ## For judges: verify in 5 steps
 
-1. Open https://falsifiable-near-two.vercel.app → the **Verdict today** card shows how many of the six claims hold, and the **Live pulse** strip shows current NEAR price, TPS and Intents volume (refreshed every 15 s with a live "updated Xs ago" clock).
+1. Open https://falsifiable-near-sand.vercel.app → the **Verdict today** card shows how many of the six claims hold, and the **Live pulse** strip shows current NEAR price, TPS and Intents volume (refreshed every 15 s with a live "updated Xs ago" clock).
 2. Scroll to **Falsification scorecard** → each claim shows its current value, its frozen pass/fail threshold and its data source.
 3. Open `/data/public.json` on the site → the same numbers as raw JSON. Every figure on the page is read from this file.
 4. Locally, run `make data && make test` → the snapshot is rebuilt from public APIs (no keys) and the tests pass, including the hash check that fails if any threshold is edited.
