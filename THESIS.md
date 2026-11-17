@@ -3,7 +3,7 @@
 <!-- auto:status -->
 **Status:** Open hypothesis, 3 of 6 tests pass on the latest snapshot (out-of-sample for the thresholds frozen at `thresholds-v1`). Not an investment recommendation.  
 **Horizon:** 3–5 years.  
-**Evidence snapshot:** data as of 2026-11-15, `data/public.json`. The numbers in this document are generated from that file by `make docs`, so they cannot drift from the dashboard.
+**Evidence snapshot:** data as of 2026-11-16, `data/public.json`. The numbers in this document are generated from that file by `make docs`, so they cannot drift from the dashboard.
 <!-- /auto:status -->
 
 ---
@@ -19,11 +19,11 @@ This is deliberately narrower than "chain abstraction will win." It names a mech
 <!-- auto:evidence -->
 | Pillar | Evidence (trailing windows) | Test |
 | --- | --- | --- |
-| **Demand** | Intents swap volume: **$33.0B** over 12 months; trailing-90d volume **2.92×** the same window a year ago and **1.89×** the prior 90d | T1 **Pass** |
-| **Monetisation** | Captured Intents revenue: **$5.3M** in the last 90d, **3.06×** the prior 90d; annualised **≈$21.5M**. Effective take rate **≈4.23 bps** of volume. Directed to open-market NEAR buybacks since 2026-02-23 | T2 **Pass** |
-| **Base-layer adoption** | Avg daily active accounts **72k** vs **286k** a year earlier (**−75%**); daily transactions **756k** vs **4.60M** (**−84%**) | T3 **Fail** |
-| **Activity quality** | Gas fees per active account **1.99×** year over year | T4 **Pass** |
-| **Value accrual** | Gross issuance **32.2M NEAR/yr (2.51%)** ≈ **$111.5M** at $3.47. Holder value (buybacks + 70% gas burn) ≈ **$22.6M/yr**. Coverage **0.20×** | T5 **Fail** |
+| **Demand** | Intents swap volume: **$33.0B** over 12 months; trailing-90d volume **2.85×** the same window a year ago and **1.90×** the prior 90d | T1 **Pass** |
+| **Monetisation** | Captured Intents revenue: **$5.3M** in the last 90d, **3.06×** the prior 90d; annualised **≈$21.6M**. Effective take rate **≈4.23 bps** of volume. Directed to open-market NEAR buybacks since 2026-02-23 | T2 **Pass** |
+| **Base-layer adoption** | Avg daily active accounts **72k** vs **285k** a year earlier (**−75%**); daily transactions **755k** vs **4.60M** (**−84%**) | T3 **Fail** |
+| **Activity quality** | Gas fees per active account **2.00×** year over year | T4 **Pass** |
+| **Value accrual** | Gross issuance **32.2M NEAR/yr (2.51%)** ≈ **$109.8M** at $3.41. Holder value (buybacks + 70% gas burn) ≈ **$22.7M/yr**. Coverage **0.21×** | T5 **Fail** |
 | **Market signal** | Weekly lead/lag of Intents volume vs NEAR price, lags 1–4w: best r = **0.0867** vs Bonferroni critical **0.25** (100 weeks) | T6 **Fail** |
 <!-- /auto:evidence -->
 
@@ -38,11 +38,11 @@ What is fixed is everything after that. The thresholds live in one constant, `TH
 <!-- auto:tests -->
 | ID | Claim | Metric | Rule | Value | Result |
 | --- | --- | --- | --- | --- | --- |
-| T1 | More money is swapping through NEAR Intents than a year ago | Intents volume, trailing 90d vs same 90d one year earlier | pass ≥ 1.50x · fail < 1.00x · otherwise inconclusive | 2.92× | **Pass** |
+| T1 | More money is swapping through NEAR Intents than a year ago | Intents volume, trailing 90d vs same 90d one year earlier | pass ≥ 1.50x · fail < 1.00x · otherwise inconclusive | 2.85× | **Pass** |
 | T2 | NEAR is capturing more of that flow as revenue | NEAR holders revenue (buyback-directed), trailing 90d vs prior 90d | pass ≥ 1.10x · fail < 0.90x · otherwise inconclusive | 3.06× | **Pass** |
 | T3 | People still use the NEAR base layer | Avg daily active accounts, trailing 90d vs same 90d one year earlier | pass ≥ 0.90x · fail < 0.75x · otherwise inconclusive | 0.25× | **Fail** |
-| T4 | Each remaining user pays more in fees | Gas fees per active account, trailing 90d vs one year earlier | pass ≥ 1.00x · fail < 0.80x · otherwise inconclusive | 1.99× | **Pass** |
-| T5 | Buybacks and burn outweigh new token issuance | (Annualised Intents holders revenue + gas burn) / annual gross issuance value | pass ≥ 1.00x · fail < 0.25x · otherwise inconclusive | 0.20× | **Fail** |
+| T4 | Each remaining user pays more in fees | Gas fees per active account, trailing 90d vs one year earlier | pass ≥ 1.00x · fail < 0.80x · otherwise inconclusive | 2.00× | **Pass** |
+| T5 | Buybacks and burn outweigh new token issuance | (Annualised Intents holders revenue + gas burn) / annual gross issuance value | pass ≥ 1.00x · fail < 0.25x · otherwise inconclusive | 0.21× | **Fail** |
 | T6 | Intents activity moves before the NEAR price | Max weekly lead correlation (1–4w) vs Bonferroni critical r | pass if best leading r > critical r (0.25) over 100 weeks · otherwise fail | 0.087 | **Fail** |
 
 Thresholds `sha256:b9548c7a9ca04a4c…` at tag `thresholds-v1`, frozen 2026-11-13.
@@ -69,16 +69,16 @@ coverage_y = (V0·(1+g)^y · take + B0·(1+b)^y) / (S0·(1+i)^(y) · i · P)
 ```
 
 <!-- auto:model -->
-- `V0` annualised trailing-90d Intents volume ($50.8B), `take` measured holder take rate (4.25 bps), `B0` annualised gas burn ($1.10M)
-- `S0` total supply (1.31B NEAR), `i` gross issuance rate (2.51%), `P` 7-day average price ($3.47), **held constant on purpose**
+- `V0` annualised trailing-90d Intents volume ($51.0B), `take` measured holder take rate (4.25 bps), `B0` annualised gas burn ($1.11M)
+- `S0` total supply (1.31B NEAR), `i` gross issuance rate (2.51%), `P` 7-day average price ($3.41), **held constant on purpose**
 
 | Scenario | Inputs | Coverage Y0 → Y5 | Crosses 1.0× |
 | --- | --- | --- | --- |
 | Bear | volume flat, measured take | 0.20 → 0.18 | Never |
-| Base | +50%/yr volume, measured take, burn +10%/yr | 0.20 → 1.28 | Year 5 |
-| Bull | +100%/yr volume, take 6 bps, burn +20%/yr | 0.28 → 7.57 | Year 2 |
+| Base | +50%/yr volume, measured take, burn +10%/yr | 0.20 → 1.31 | Year 5 |
+| Bull | +100%/yr volume, take 6 bps, burn +20%/yr | 0.28 → 7.71 | Year 2 |
 
-**Break-even:** at the measured take rate and issuance (burn +10%/yr), Intents volume must grow **≈43%/yr** for five years to reach coverage 1.0× by year 5. The trailing year-over-year growth rate is ≈192%.
+**Break-even:** at the measured take rate and issuance (burn +10%/yr), Intents volume must grow **≈42%/yr** for five years to reach coverage 1.0× by year 5. The trailing year-over-year growth rate is ≈185%.
 <!-- /auto:model -->
 
 The model is a sensitivity analysis, not a fair-value estimate. It omits discount rates, price changes, staking yield to stakers, and uncertainty bands, and it must not be used to infer a NEAR price target.

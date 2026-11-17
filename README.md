@@ -19,18 +19,18 @@ Submission for the NEAR hackathon **Investment Thesis** track: *"Make the long-t
 5. Run `make dev` and open the **Scenario model** → change growth, take rate or issuance and watch year-5 coverage and break-even growth update.
 
 <!-- auto:readme-results -->
-## Result (snapshot 2026-11-15)
+## Result (snapshot 2026-11-16)
 
 | | Claim | Value | Result |
 | --- | --- | --- | --- |
-| T1 | More money is swapping through NEAR Intents than a year ago | 2.92× | Pass |
+| T1 | More money is swapping through NEAR Intents than a year ago | 2.85× | Pass |
 | T2 | NEAR is capturing more of that flow as revenue | 3.06× | Pass |
 | T3 | People still use the NEAR base layer | 0.25× | Fail |
-| T4 | Each remaining user pays more in fees | 1.99× | Pass |
-| T5 | Buybacks and burn outweigh new token issuance | 0.20× | Fail |
+| T4 | Each remaining user pays more in fees | 2.00× | Pass |
+| T5 | Buybacks and burn outweigh new token issuance | 0.21× | Fail |
 | T6 | Intents activity moves before the NEAR price | 0.087 | Fail |
 
-**Track record:** 27 weekly gradings with the same rules, 1/6 on 2026-05-17 → 3/6 on 2026-11-15. 1 of them is out-of-sample; the rest are backfilled and descriptive.
+**Track record:** 27 weekly gradings with the same rules, 1/6 on 2026-05-18 → 3/6 on 2026-11-16. 1 of them is out-of-sample; the rest are backfilled and descriptive.
 
 Graded with thresholds frozen at tag `thresholds-v1`; this snapshot is out-of-sample.
 <!-- /auto:readme-results -->

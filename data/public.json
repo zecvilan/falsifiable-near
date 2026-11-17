@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-11-16T08:10:44+00:00",
- "asOf": "2026-11-15",
+ "generatedAt": "2026-11-17T06:59:39+00:00",
+ "asOf": "2026-11-16",
  "window": {
-  "start": "2024-11-16",
-  "end": "2026-11-15",
+  "start": "2024-11-17",
+  "end": "2026-11-16",
   "days": 730
  },
  "sources": {
@@ -63,40 +63,40 @@
   }
  },
  "metrics": {
-  "price_usd_7d": 3.4668,
-  "market_cap_usd": 3972082659.0,
-  "total_supply_near": 1311802684.0,
-  "net_issuance_near_1y": 31758051.0,
-  "burned_near_1y": 408849.0,
-  "gross_issuance_near_1y": 32166900.0,
-  "gross_issuance_rate_1y": 0.02513,
-  "issuance_value_usd_annual": 111516897.0,
-  "intents_volume_usd_1y": 32995719913.0,
-  "intents_volume_usd_90d": 12538295076.0,
-  "intents_volume_usd_90d_annualized": 50849752253.0,
-  "intents_volume_yoy_90d": 2.9213,
-  "intents_volume_qoq_90d": 1.8931,
-  "intents_fees_usd_1y": 54186841.0,
-  "intents_holders_revenue_usd_1y": 8304275.0,
-  "intents_holders_revenue_usd_90d": 5306179.0,
-  "intents_holders_revenue_qoq_90d": 3.0552,
-  "intents_holders_revenue_annualized_90d": 21519504.0,
-  "intents_holders_revenue_annualized_30d": 20678065.0,
+  "price_usd_7d": 3.4145,
+  "market_cap_usd": 4217011286.0,
+  "total_supply_near": 1311905755.0,
+  "net_issuance_near_1y": 31755655.0,
+  "burned_near_1y": 407470.0,
+  "gross_issuance_near_1y": 32163125.0,
+  "gross_issuance_rate_1y": 0.02512,
+  "issuance_value_usd_annual": 109821983.0,
+  "intents_volume_usd_1y": 32992182739.0,
+  "intents_volume_usd_90d": 12579852103.0,
+  "intents_volume_usd_90d_annualized": 51018289084.0,
+  "intents_volume_yoy_90d": 2.8515,
+  "intents_volume_qoq_90d": 1.8957,
+  "intents_fees_usd_1y": 54256875.0,
+  "intents_holders_revenue_usd_1y": 8336873.0,
+  "intents_holders_revenue_usd_90d": 5323425.0,
+  "intents_holders_revenue_qoq_90d": 3.0624,
+  "intents_holders_revenue_annualized_90d": 21589446.0,
+  "intents_holders_revenue_annualized_30d": 20681119.0,
   "intents_take_rate_90d": 0.000423,
-  "gas_fees_usd_1y": 1140305.0,
-  "burn_usd_1y": 800609.0,
-  "burn_usd_annualized_90d": 1099039.0,
-  "value_accrual_coverage_90d": 0.2028,
-  "txns_avg_90d": 755561.0,
-  "txns_avg_90d_yoy": 4603196.0,
-  "active_accounts_avg_90d": 71768.0,
-  "active_accounts_avg_90d_yoy": 286228.0,
-  "active_accounts_yoy_ratio": 0.2507,
-  "txns_yoy_ratio": 0.1641,
-  "gas_fees_per_active_account_90d": 0.059539,
-  "gas_fees_per_active_account_yoy_ratio": 1.992,
-  "market_cap_to_intents_volume_annualized": 0.0781,
-  "market_cap_to_holder_value_annualized": 175.6
+  "gas_fees_usd_1y": 1135383.0,
+  "burn_usd_1y": 797935.0,
+  "burn_usd_annualized_90d": 1105707.0,
+  "value_accrual_coverage_90d": 0.2067,
+  "txns_avg_90d": 755320.0,
+  "txns_avg_90d_yoy": 4595102.0,
+  "active_accounts_avg_90d": 71747.0,
+  "active_accounts_avg_90d_yoy": 285171.0,
+  "active_accounts_yoy_ratio": 0.2516,
+  "txns_yoy_ratio": 0.1644,
+  "gas_fees_per_active_account_90d": 0.05975,
+  "gas_fees_per_active_account_yoy_ratio": 1.9957,
+  "market_cap_to_intents_volume_annualized": 0.0827,
+  "market_cap_to_holder_value_annualized": 185.8
  },
  "tests": [
   {
@@ -105,7 +105,7 @@
    "pillar": "Demand",
    "name": "Intents demand is compounding",
    "metric": "Intents volume, trailing 90d vs same 90d one year earlier",
-   "value": 2.9213,
+   "value": 2.8515,
    "unit": "x",
    "rule": "pass \u2265 1.50x \u00b7 fail < 1.00x \u00b7 otherwise inconclusive",
    "result": "pass"
@@ -116,7 +116,7 @@
    "pillar": "Monetisation",
    "name": "Captured Intents revenue is rising",
    "metric": "NEAR holders revenue (buyback-directed), trailing 90d vs prior 90d",
-   "value": 3.0552,
+   "value": 3.0624,
    "unit": "x",
    "rule": "pass \u2265 1.10x \u00b7 fail < 0.90x \u00b7 otherwise inconclusive",
    "result": "pass"
@@ -127,7 +127,7 @@
    "pillar": "Adoption",
    "name": "Base-layer usage is retained",
    "metric": "Avg daily active accounts, trailing 90d vs same 90d one year earlier",
-   "value": 0.2507,
+   "value": 0.2516,
    "unit": "x",
    "rule": "pass \u2265 0.90x \u00b7 fail < 0.75x \u00b7 otherwise inconclusive",
    "result": "fail"
@@ -138,7 +138,7 @@
    "pillar": "Activity quality",
    "name": "Remaining activity is economically denser",
    "metric": "Gas fees per active account, trailing 90d vs one year earlier",
-   "value": 1.992,
+   "value": 1.9957,
    "unit": "x",
    "rule": "pass \u2265 1.00x \u00b7 fail < 0.80x \u00b7 otherwise inconclusive",
    "result": "pass"
@@ -149,7 +149,7 @@
    "pillar": "Value accrual",
    "name": "Holder value offsets dilution",
    "metric": "(Annualised Intents holders revenue + gas burn) / annual gross issuance value",
-   "value": 0.2028,
+   "value": 0.2067,
    "unit": "x",
    "rule": "pass \u2265 1.00x \u00b7 fail < 0.25x \u00b7 otherwise inconclusive",
    "result": "fail"
@@ -226,17 +226,17 @@
   "supported": false
  },
  "model": {
-  "price_usd": 3.4668,
-  "total_supply_near": 1311802684.0,
-  "issuance_rate": 0.02513,
-  "intents_volume_usd_annual": 50849752253.0,
+  "price_usd": 3.4145,
+  "total_supply_near": 1311905755.0,
+  "issuance_rate": 0.02512,
+  "intents_volume_usd_annual": 51018289084.0,
   "intents_take_rate": 0.000423,
-  "burn_usd_annual": 1099039.0,
-  "intents_volume_yoy_90d": 2.9213
+  "burn_usd_annual": 1105707.0,
+  "intents_volume_yoy_90d": 2.8515
  },
  "history": [
   {
-   "asOf": "2026-05-17",
+   "asOf": "2026-05-18",
    "in_sample": true,
    "passed": 1,
    "results": {
@@ -248,16 +248,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 53.518,
+    "T1": 52.76,
     "T2": null,
-    "T3": 0.2929,
-    "T4": 0.669,
-    "T5": 0.0773,
+    "T3": 0.286,
+    "T4": 0.6834,
+    "T5": 0.0789,
     "T6": 0.1346
    }
   },
   {
-   "asOf": "2026-05-24",
+   "asOf": "2026-05-25",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -269,16 +269,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 47.1574,
-    "T2": 222.5249,
-    "T3": 0.2793,
-    "T4": 0.7052,
-    "T5": 0.0741,
+    "T1": 46.3808,
+    "T2": 99.816,
+    "T3": 0.2799,
+    "T4": 0.7086,
+    "T5": 0.071,
     "T6": 0.1189
    }
   },
   {
-   "asOf": "2026-05-31",
+   "asOf": "2026-06-01",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -290,16 +290,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 37.558,
-    "T2": 6.4059,
-    "T3": 0.2807,
-    "T4": 0.6972,
-    "T5": 0.0568,
+    "T1": 38.0047,
+    "T2": 6.0778,
+    "T3": 0.2808,
+    "T4": 0.6961,
+    "T5": 0.0578,
     "T6": 0.1008
    }
   },
   {
-   "asOf": "2026-06-07",
+   "asOf": "2026-06-08",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -311,16 +311,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 37.7243,
-    "T2": 6.3129,
-    "T3": 0.2821,
-    "T4": 0.6948,
-    "T5": 0.0708,
+    "T1": 37.935,
+    "T2": 6.1245,
+    "T3": 0.2825,
+    "T4": 0.69,
+    "T5": 0.0724,
     "T6": 0.1001
    }
   },
   {
-   "asOf": "2026-06-14",
+   "asOf": "2026-06-15",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -332,16 +332,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 34.3492,
-    "T2": 4.372,
-    "T3": 0.2828,
-    "T4": 0.6567,
+    "T1": 34.4445,
+    "T2": 4.287,
+    "T3": 0.2832,
+    "T4": 0.6515,
     "T5": 0.0805,
     "T6": 0.1052
    }
   },
   {
-   "asOf": "2026-06-21",
+   "asOf": "2026-06-22",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -353,16 +353,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 28.0447,
-    "T2": 3.7468,
-    "T3": 0.2852,
-    "T4": 0.6323,
-    "T5": 0.0764,
+    "T1": 26.9564,
+    "T2": 3.7082,
+    "T3": 0.2855,
+    "T4": 0.6284,
+    "T5": 0.0775,
     "T6": 0.1085
    }
   },
   {
-   "asOf": "2026-06-28",
+   "asOf": "2026-06-29",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -374,16 +374,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 20.387,
-    "T2": 1.9949,
-    "T3": 0.29,
-    "T4": 0.6,
-    "T5": 0.0782,
+    "T1": 19.6575,
+    "T2": 1.9566,
+    "T3": 0.2909,
+    "T4": 0.5934,
+    "T5": 0.0797,
     "T6": 0.1004
    }
   },
   {
-   "asOf": "2026-07-05",
+   "asOf": "2026-07-06",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -395,16 +395,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 17.4993,
-    "T2": 1.8952,
-    "T3": 0.2949,
-    "T4": 0.6105,
-    "T5": 0.083,
+    "T1": 17.4169,
+    "T2": 1.8799,
+    "T3": 0.2954,
+    "T4": 0.6141,
+    "T5": 0.0825,
     "T6": 0.1
    }
   },
   {
-   "asOf": "2026-07-12",
+   "asOf": "2026-07-13",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -416,16 +416,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 16.4439,
-    "T2": 1.7831,
-    "T3": 0.2958,
-    "T4": 0.6305,
-    "T5": 0.084,
+    "T1": 16.4202,
+    "T2": 1.7651,
+    "T3": 0.2959,
+    "T4": 0.6369,
+    "T5": 0.085,
     "T6": 0.0941
    }
   },
   {
-   "asOf": "2026-07-19",
+   "asOf": "2026-07-20",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -437,16 +437,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 15.7562,
-    "T2": 1.7565,
-    "T3": 0.2954,
-    "T4": 0.6453,
-    "T5": 0.0887,
+    "T1": 15.3107,
+    "T2": 1.7573,
+    "T3": 0.2953,
+    "T4": 0.646,
+    "T5": 0.0892,
     "T6": 0.0931
    }
   },
   {
-   "asOf": "2026-07-26",
+   "asOf": "2026-07-27",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -458,16 +458,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 13.8317,
-    "T2": 1.7154,
-    "T3": 0.2953,
-    "T4": 0.6563,
-    "T5": 0.0972,
+    "T1": 13.5935,
+    "T2": 1.7124,
+    "T3": 0.2954,
+    "T4": 0.6575,
+    "T5": 0.0984,
     "T6": 0.0937
    }
   },
   {
-   "asOf": "2026-08-02",
+   "asOf": "2026-08-03",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -479,16 +479,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 12.0617,
-    "T2": 1.6352,
-    "T3": 0.2929,
-    "T4": 0.6684,
-    "T5": 0.1119,
+    "T1": 11.667,
+    "T2": 1.5917,
+    "T3": 0.2923,
+    "T4": 0.6709,
+    "T5": 0.1126,
     "T6": 0.0917
    }
   },
   {
-   "asOf": "2026-08-09",
+   "asOf": "2026-08-10",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -500,16 +500,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 10.9145,
-    "T2": 1.4976,
-    "T3": 0.2892,
-    "T4": 0.6863,
-    "T5": 0.1144,
+    "T1": 10.6818,
+    "T2": 1.4788,
+    "T3": 0.2894,
+    "T4": 0.6876,
+    "T5": 0.1157,
     "T6": 0.0915
    }
   },
   {
-   "asOf": "2026-08-16",
+   "asOf": "2026-08-17",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -521,16 +521,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 9.9321,
-    "T2": 1.3826,
+    "T1": 9.9295,
+    "T2": 1.3769,
     "T3": 0.2871,
-    "T4": 0.6942,
-    "T5": 0.1198,
+    "T4": 0.695,
+    "T5": 0.1207,
     "T6": 0.0919
    }
   },
   {
-   "asOf": "2026-08-23",
+   "asOf": "2026-08-24",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -542,16 +542,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 9.6936,
-    "T2": 1.2666,
-    "T3": 0.2847,
-    "T4": 0.6948,
-    "T5": 0.1188,
+    "T1": 9.6224,
+    "T2": 1.1995,
+    "T3": 0.2837,
+    "T4": 0.6941,
+    "T5": 0.1131,
     "T6": 0.0877
    }
   },
   {
-   "asOf": "2026-08-30",
+   "asOf": "2026-08-31",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -563,16 +563,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 9.5186,
-    "T2": 1.2482,
-    "T3": 0.2797,
-    "T4": 0.6861,
-    "T5": 0.1085,
+    "T1": 9.5298,
+    "T2": 1.227,
+    "T3": 0.279,
+    "T4": 0.6817,
+    "T5": 0.1101,
     "T6": 0.0817
    }
   },
   {
-   "asOf": "2026-09-06",
+   "asOf": "2026-09-07",
    "in_sample": true,
    "passed": 1,
    "results": {
@@ -584,16 +584,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 9.2209,
-    "T2": 1.0846,
-    "T3": 0.2744,
-    "T4": 0.6789,
-    "T5": 0.1089,
+    "T1": 9.1847,
+    "T2": 1.0804,
+    "T3": 0.2738,
+    "T4": 0.6816,
+    "T5": 0.1046,
     "T6": 0.0817
    }
   },
   {
-   "asOf": "2026-09-13",
+   "asOf": "2026-09-14",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -605,16 +605,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 8.6858,
-    "T2": 1.1454,
-    "T3": 0.2681,
-    "T4": 0.6942,
-    "T5": 0.0964,
+    "T1": 8.5683,
+    "T2": 1.1524,
+    "T3": 0.2665,
+    "T4": 0.6969,
+    "T5": 0.0982,
     "T6": 0.0759
    }
   },
   {
-   "asOf": "2026-09-20",
+   "asOf": "2026-09-21",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -626,16 +626,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 8.7526,
-    "T2": 1.3412,
-    "T3": 0.2572,
-    "T4": 0.7522,
-    "T5": 0.0955,
+    "T1": 8.9239,
+    "T2": 1.4047,
+    "T3": 0.2559,
+    "T4": 0.7707,
+    "T5": 0.0918,
     "T6": 0.1013
    }
   },
   {
-   "asOf": "2026-09-27",
+   "asOf": "2026-09-28",
    "in_sample": true,
    "passed": 2,
    "results": {
@@ -647,16 +647,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 9.3902,
-    "T2": 1.9052,
-    "T3": 0.2476,
-    "T4": 0.914,
-    "T5": 0.0762,
+    "T1": 9.3713,
+    "T2": 1.9426,
+    "T3": 0.2464,
+    "T4": 0.9482,
+    "T5": 0.0749,
     "T6": 0.0737
    }
   },
   {
-   "asOf": "2026-10-04",
+   "asOf": "2026-10-05",
    "in_sample": true,
    "passed": 3,
    "results": {
@@ -668,16 +668,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 7.6365,
-    "T2": 2.1455,
-    "T3": 0.2494,
-    "T4": 1.1002,
-    "T5": 0.0821,
+    "T1": 7.4336,
+    "T2": 2.1626,
+    "T3": 0.2495,
+    "T4": 1.1124,
+    "T5": 0.0844,
     "T6": 0.0772
    }
   },
   {
-   "asOf": "2026-10-11",
+   "asOf": "2026-10-12",
    "in_sample": true,
    "passed": 3,
    "results": {
@@ -689,16 +689,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 6.4863,
-    "T2": 2.4014,
-    "T3": 0.2509,
-    "T4": 1.3298,
-    "T5": 0.0946,
+    "T1": 6.3185,
+    "T2": 2.382,
+    "T3": 0.2504,
+    "T4": 1.3504,
+    "T5": 0.093,
     "T6": 0.0765
    }
   },
   {
-   "asOf": "2026-10-18",
+   "asOf": "2026-10-19",
    "in_sample": true,
    "passed": 3,
    "results": {
@@ -710,16 +710,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 5.7208,
-    "T2": 2.495,
-    "T3": 0.247,
-    "T4": 1.5886,
-    "T5": 0.1032,
+    "T1": 5.6845,
+    "T2": 2.4795,
+    "T3": 0.2463,
+    "T4": 1.6107,
+    "T5": 0.1069,
     "T6": 0.0773
    }
   },
   {
-   "asOf": "2026-10-25",
+   "asOf": "2026-10-26",
    "in_sample": true,
    "passed": 3,
    "results": {
@@ -731,16 +731,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 5.1976,
-    "T2": 2.5667,
-    "T3": 0.2425,
-    "T4": 1.7436,
-    "T5": 0.1184,
+    "T1": 5.0903,
+    "T2": 2.6048,
+    "T3": 0.2419,
+    "T4": 1.7636,
+    "T5": 0.1221,
     "T6": 0.077
    }
   },
   {
-   "asOf": "2026-11-01",
+   "asOf": "2026-11-02",
    "in_sample": true,
    "passed": 3,
    "results": {
@@ -752,16 +752,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 4.4214,
-    "T2": 2.7688,
-    "T3": 0.2385,
-    "T4": 1.8924,
-    "T5": 0.1413,
+    "T1": 4.3254,
+    "T2": 2.7986,
+    "T3": 0.2379,
+    "T4": 1.9116,
+    "T5": 0.1434,
     "T6": 0.0838
    }
   },
   {
-   "asOf": "2026-11-08",
+   "asOf": "2026-11-09",
    "in_sample": true,
    "passed": 3,
    "results": {
@@ -773,16 +773,16 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 3.4147,
-    "T2": 2.8897,
-    "T3": 0.2414,
-    "T4": 1.9672,
-    "T5": 0.1713,
+    "T1": 3.3688,
+    "T2": 2.8934,
+    "T3": 0.2423,
+    "T4": 1.9695,
+    "T5": 0.1772,
     "T6": 0.0792
    }
   },
   {
-   "asOf": "2026-11-15",
+   "asOf": "2026-11-16",
    "in_sample": false,
    "passed": 3,
    "results": {
@@ -794,11 +794,11 @@
     "T6": "fail"
    },
    "values": {
-    "T1": 2.9213,
-    "T2": 3.0552,
-    "T3": 0.2507,
-    "T4": 1.992,
-    "T5": 0.2028,
+    "T1": 2.8515,
+    "T2": 3.0624,
+    "T3": 0.2516,
+    "T4": 1.9957,
+    "T5": 0.2067,
     "T6": 0.0867
    }
   }
@@ -806,14 +806,14 @@
  "weekly": [
   {
    "period": "2024-11-11",
-   "days": 2,
-   "txns_avg": 7121253.0,
-   "active_accounts_avg": 954644.0,
-   "new_accounts": 774373.0,
-   "price_usd": 5.7677,
+   "days": 1,
+   "txns_avg": 7350855.0,
+   "active_accounts_avg": 928495.0,
+   "new_accounts": 375271.0,
+   "price_usd": 5.9648,
    "total_supply_near": 1220721272.0,
-   "gas_fees_usd": 46640.0,
-   "burn_usd": 32647.0,
+   "gas_fees_usd": 23459.0,
+   "burn_usd": 16421.0,
    "intents_volume_usd": null,
    "intents_fees_usd": null,
    "intents_holders_revenue_usd": null
@@ -2271,21 +2271,35 @@
    "gas_fees_usd": 23396.0,
    "burn_usd": 18178.0,
    "intents_volume_usd": 1075832187.0,
-   "intents_fees_usd": 1976814.0,
-   "intents_holders_revenue_usd": 412145.0
+   "intents_fees_usd": 2302424.0,
+   "intents_holders_revenue_usd": 408186.0
+  },
+  {
+   "period": "2026-11-16",
+   "days": 1,
+   "txns_avg": 652151.0,
+   "active_accounts_avg": 78163.0,
+   "new_accounts": 5714.0,
+   "price_usd": 3.2147,
+   "total_supply_near": 1311905755.0,
+   "gas_fees_usd": 2572.0,
+   "burn_usd": 2572.0,
+   "intents_volume_usd": 122427474.0,
+   "intents_fees_usd": 20179.0,
+   "intents_holders_revenue_usd": 36557.0
   }
  ],
  "monthly": [
   {
    "period": "2024-11",
-   "days": 15,
-   "txns_avg": 7104316.0,
-   "active_accounts_avg": 862628.0,
-   "new_accounts": 5640534.0,
-   "price_usd": 6.2327,
+   "days": 14,
+   "txns_avg": 7119506.0,
+   "active_accounts_avg": 854188.0,
+   "new_accounts": 5241432.0,
+   "price_usd": 6.28,
    "total_supply_near": 1222928036.0,
-   "gas_fees_usd": 378306.0,
-   "burn_usd": 264814.0,
+   "gas_fees_usd": 355125.0,
+   "burn_usd": 248588.0,
    "intents_volume_usd": null,
    "intents_fees_usd": null,
    "intents_holders_revenue_usd": null
@@ -2614,35 +2628,20 @@
   },
   {
    "period": "2026-11",
-   "days": 15,
-   "txns_avg": 764354.0,
-   "active_accounts_avg": 81310.0,
-   "new_accounts": 136263.0,
-   "price_usd": 3.7191,
-   "total_supply_near": 1311802684.0,
-   "gas_fees_usd": 47868.0,
-   "burn_usd": 35308.0,
-   "intents_volume_usd": 2069943222.0,
-   "intents_fees_usd": 3573218.0,
-   "intents_holders_revenue_usd": 788978.0
+   "days": 16,
+   "txns_avg": 757341.0,
+   "active_accounts_avg": 81113.0,
+   "new_accounts": 141977.0,
+   "price_usd": 3.6876,
+   "total_supply_near": 1311905755.0,
+   "gas_fees_usd": 50440.0,
+   "burn_usd": 37880.0,
+   "intents_volume_usd": 2192370696.0,
+   "intents_fees_usd": 3919007.0,
+   "intents_holders_revenue_usd": 821576.0
   }
  ],
  "daily": [
-  {
-   "date": "2024-11-16",
-   "txns": 6891651.0,
-   "active_accounts": 980793.0,
-   "new_accounts": 399102.0,
-   "price_usd": 5.5705,
-   "market_cap_usd": 6790357674.1135,
-   "total_supply_near": 1220633078.5712,
-   "gas_fees_usd": 23181.0,
-   "burn_usd": 16226.0,
-   "burn_near": 2912.8223,
-   "intents_volume_usd": null,
-   "intents_fees_usd": null,
-   "intents_holders_revenue_usd": null
-  },
   {
    "date": "2024-11-17",
    "txns": 7350855.0,
@@ -13560,8 +13559,8 @@
    "burn_usd": 3285.0,
    "burn_near": 953.2164,
    "intents_volume_usd": 153179701.0,
-   "intents_fees_usd": 431515.0,
-   "intents_holders_revenue_usd": 68588.0
+   "intents_fees_usd": 430319.0,
+   "intents_holders_revenue_usd": 65137.0
   },
   {
    "date": "2026-11-15",
@@ -13575,8 +13574,23 @@
    "burn_usd": 2713.0,
    "burn_near": 895.9318,
    "intents_volume_usd": 145358103.0,
-   "intents_fees_usd": 44510.0,
-   "intents_holders_revenue_usd": 36265.0
+   "intents_fees_usd": 371316.0,
+   "intents_holders_revenue_usd": 35757.0
+  },
+  {
+   "date": "2026-11-16",
+   "txns": 652151.0,
+   "active_accounts": 78163.0,
+   "new_accounts": 5714.0,
+   "price_usd": 3.2147,
+   "market_cap_usd": 4217011285.8141,
+   "total_supply_near": 1311905755.0977,
+   "gas_fees_usd": 2572.0,
+   "burn_usd": 2572.0,
+   "burn_near": 800.0824,
+   "intents_volume_usd": 122427474.0,
+   "intents_fees_usd": 20179.0,
+   "intents_holders_revenue_usd": 36557.0
   }
  ],
  "limitations": [
